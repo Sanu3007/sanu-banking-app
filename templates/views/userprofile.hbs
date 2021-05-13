@@ -1,0 +1,27 @@
+{{>header}}
+
+    <div class="bg-section">
+        <section class="section">
+            <div class="section-title">
+                <h2>Profile</h2>
+            </div>
+            <div class="section-center profile-center">
+                <article class="profile-card">
+                    <div class="profile-img-container">
+                        <img class="profile-img" src={{user.avatar}} alt="profile-pic">
+                    </div>
+                    <hr>
+                    <div class="profile-info">
+                        <h4>Name : {{user.name}}</h4>
+                        <h4>Email : {{user.email}}</h4>
+                        <h4>Age : {{user.age}}</h4>
+                        <h4>Balance : <span class="user-balance">{{user.balance}}</span></h4>
+                    </div>
+                    <div class="donate-btn">
+                        <a href="/users/transfer/{{user.id}}"><button class="btn">send money</button></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+{{>footer}}

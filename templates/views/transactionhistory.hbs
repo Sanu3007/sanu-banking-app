@@ -1,0 +1,27 @@
+{{>header}}
+    <div class="bg-section">
+        <div class="section-title">
+            <h2>Transactions</h2>
+        </div>
+        <div class="section">
+        <div class="section-center cards-display">
+        {{#transactionHist}}
+            <article class="single-transaction">
+                <div class="trans-img-container">
+                    <img class="trans-img" src="/assets/transaction.jpg" alt="transaction">
+                </div>
+                <div class="trans-info">
+                    <p>Sender : <span>{{sender}}</span></p>
+                    <p>Receiver : <span>{{receiver}}</span></p>
+                    <p>Amount : <span>{{amount}}</span></p>
+                </div>
+                <div class="duration">
+                    <p>{{date}}</p>
+                    <p>{{time}}</p>
+                </div>
+            </article>
+        {{/transactionHist}}
+        </div>
+        </div>
+    </div>
+{{>footer}}

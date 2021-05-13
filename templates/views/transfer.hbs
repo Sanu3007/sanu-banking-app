@@ -1,0 +1,27 @@
+{{>header}}
+    <div class="form bg-section">
+        
+        <div class="section form-center">
+            <div class="section-title">
+                <h2>Payment Form</h2>
+            </div>
+            <form action="/users/transfermoney/{{donater.id}}?_method=PUT" method="POST">
+                <h3>Sender : {{donater.name}}</h3>
+                <h3>Balance : {{donater.balance}}</h3>
+                <div class="form-control">
+                    <label for="receiver">Receiver</label>
+                    <select name="receiver" id="receiver">
+                        {{#receivers}}
+                        <option value={{name}}>{{name}}</option>
+                        {{/receivers}}
+                    </select>
+                </div>
+                <div class="form-control">
+                    <label for="credit">Amount</label>
+                    <input type="number" name="credit" id="credit">
+                </div>
+                <button type="submit" class="btn transfer-btn">Transfer</button>
+            </form>
+        </div>
+    </div>
+{{>footer}}
